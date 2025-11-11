@@ -1,3 +1,15 @@
+---
+import { Mail } from 'lucide-react';
+import { Dot } from 'lucide-react';
+import { Facebook } from 'lucide-react';
+import { Instagram } from 'lucide-react';
+import { Twitter } from 'lucide-react';
+import { Linkedin } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
+
+---
+
+ 
  <footer class="wpo-site-footer">
             <div class="wpo-upper-footer">
                 <div class="container">
@@ -9,10 +21,10 @@
                                 </div>
                                 <p>Making your packing requirements</p>
                                 <ul class="social">
-                                    <li><a href="#"><i class="flaticon-facebook-app-symbol"></i></a></li>
-                                    <li><a href="#"><i class="flaticon-twitter"></i></a></li>
-                                    <li><a href="#"><i class="flaticon-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="flaticon-instagram"></i></a></li>
+                                    <li><a href="#"><Facebook /></a></li>
+                                    <li><a href="#"><Instagram /></i></a></li>
+                                    <li><a href="#"><Twitter /></a></li>
+                                    <li><a href="#"><Linkedin /></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -22,53 +34,23 @@
                                     <h3>Quick Links:</h3>
                                 </div>
                                 <ul>
-                                    <li><a href="#">Contact us</a></li>
-                                    <li><a href="#">How it Works</a></li>
-                                    <li><a href="#">Create</a></li>
-                                    <li><a href="#">Explore</a></li>
-                                    <li><a href="#">Terms & Services</a></li>
+                                    <li><ChevronRight /><a href="contact">Contact us</a></li>
+                                    <li><ChevronRight /><a href="about">About us</a></li>
                                 </ul>
                             </div>
                         </div>
-                        <!-- <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
+                        <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
                             <div class="widget link-widget">
                                 <div class="widget-title">
-                                    <h3>support:</h3>
+                                    <h3>Contact us for Enquiry</h3>
                                 </div>
                                 <ul>
-                                    <li><a href="#">faq</a></li>
-                                    <li><a href="#">sustainability</a></li>
-                                    <li><a href="#">care guide</a></li>
-                                    <li><a href="#">Explore</a></li>
-                                    <li><a href="#">size guide</a></li>
+                                    
+ <li> <a href="mailto:info@rashidmira.com"> <Mail color='white'/>   info@rashidmira.com</a></li>
                                 </ul>
                             </div>
-                        </div> -->
-
-                        <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
-                            <div class="widget social-widget">
-                                <div class="widget-title">
-                                    <h3>Follow us on socialmedia</h3>
-                                </div>
-                                <p>Instagram  @miraboite
-</p>
-                                <!-- <p>MIRA BOITE INTERNATIONAL LIMITED
-UNIT 1603, 16TH FLOOR, THE L. PLAZA 367 - 375 QUEEN'S ROAD CENTRAL SHEUNG WAN HK HONG KONG, HONG KONG
-</p>
-                                <p>DIWANIYA INTERIORS FZC,
-E32-F44, Hamriyah Free Zone, PO Box No. 49944, Sharjah, UAE
-Sharjah – U.A.E, P.O. Box: 49944</p>
-                                <p>MIRABOITE PACKAGING LLP
-50/1062 A2,(37/3434) GROUND FLOOR PRASANTHI NAGAR ROAD,PERINGAD EDAPPALLY, Kerala, India - 682024
-</p> -->
-                                <!-- <form class="subscribe">
-                                    <input class="sub" type="email" placeholder="Email here">
-                                    <button type="submit">
-                                        <i class="flaticon-telegram"></i>
-                                    </button>
-                                </form> -->
-                            </div>
                         </div>
+
                     </div>
                 </div> <!-- end container -->
             </div>
@@ -92,3 +74,11 @@ Sharjah – U.A.E, P.O. Box: 49944</p>
                 </svg>
             </div>
         </footer>
+        <style>
+/* remove generated ::before/::after for footer anchors (override theme) */
+.wpo-site-footer a::before,
+.wpo-site-footer a::after {
+  content: "" !important;
+  display: none !important;
+}
+</style>
