@@ -1,0 +1,350 @@
+/*--------------------------------------------------------------
+5.about-page
+----------------------------------------------------------------*/
+
+
+
+/* 5.1 wpo-about-section */
+.wpo-about-section {}
+
+.about-left-wrap {
+    position: relative;
+    z-index: 1;
+    margin-right: 85px;
+
+    @media (max-width:1399px) {
+        margin-right: 15px;
+    }
+
+    @media (max-width:991px) {
+        margin-bottom: 40px;
+        margin-right: 0;
+    }
+
+    .image-1 {
+        margin-bottom: 30px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .image-2 {
+        img {
+            width: 100%;
+        }
+    }
+
+    .icon {
+        border-radius: 1000px;
+        background: rgb(255, 255, 255, 0.25);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        height: 221px;
+        width: 182px;
+        z-index: 1;
+        line-height: 221px;
+
+        @media (max-width:767px) {
+            height: 150px;
+            width: 130px;
+            line-height: 150px;
+        }
+
+        &::before {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            content: '';
+            background: $white;
+            height: 170px;
+            width: 140px;
+            border-radius: 1000px;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+
+            @media (max-width:767px) {
+                height: 120px;
+                width: 98px;
+            }
+        }
+    }
+
+}
+
+.about-right-wrap {
+
+    .title {
+        font-family: 'Cinzel';
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 67px;
+        text-transform: uppercase;
+        color: #626842;
+
+        @media (max-width:767px) {
+            font-size: 40px;
+        }
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 32px;
+        margin-bottom: 38px;
+        margin-right: 59px;
+        color: #84857E;
+
+        @media (max-width:1199px) {
+            margin-right: 0px;
+            margin-bottom: 13px;
+            line-height: 29px;
+        }
+
+    }
+
+    .about-btn {
+        margin-top: 70px;
+
+        @media (max-width:1399px) {
+            margin-top: 50px;
+        }
+
+        @media (max-width:1199px) {
+            margin-top: 30px;
+        }
+
+        .theme-btn {
+            background: #F5F2EA;
+            color: $text-light-color;
+
+            &:hover {
+                background: transparent;
+            }
+        }
+    }
+
+}
+
+
+/* 5.2 wpo-team-section */
+.wpo-team-section {
+    background: #F5F2EA;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    @media (max-width:991px) {
+        padding-bottom: 60px;
+    }
+
+    @media (max-width:767px) {
+        padding-bottom: 50px;
+    }
+
+    &.s2 {
+        border-top: 1px solid #ffffff;
+    }
+
+    .left-shape-top {
+        position: absolute;
+        width: 267px;
+        height: 485px;
+        border: 1px solid #EEDECB;
+        border-radius: 1000px;
+        left: -10px;
+        top: -100px;
+        z-index: -1;
+
+        @media (max-width:1199px) {
+            width: 167px;
+            height: 285px;
+        }
+
+        @media (max-width:991px) {
+            display: none;
+        }
+    }
+
+    .left-shape {
+        position: absolute;
+        width: 650px;
+        height: 259px;
+        left: 0;
+        bottom: 0;
+        background: #F4E8DA;
+        z-index: -1;
+
+        @media (max-width:1199px) {
+            width: 400px;
+        }
+
+        @media (max-width:991px) {
+            display: none;
+        }
+    }
+
+    .right-shape {
+        position: absolute;
+        right: 50px;
+        top: 83px;
+        z-index: -1;
+        height: 515px;
+        width: 515px;
+
+        @media (max-width:1799px) {
+            height: 400px;
+            width: 400px;
+            top: 134px;
+        }
+
+        @media (max-width:1699px) {
+            right: -38px;
+        }
+
+        @media (max-width:1599px) {
+            height: 300px;
+            width: 300px;
+            top: 184px;
+        }
+
+        @media (max-width:1399px) {
+            display: none;
+        }
+    }
+}
+
+.team-wrap {
+    .col {
+
+        &:first-child,
+        &:nth-child(4) {
+            .team-card {
+                margin-right: 53px;
+
+                @media (max-width:1199px) {
+                    margin-right: 15px;
+                }
+
+                @media (max-width:991px) {
+                    margin-right: 15px;
+                    margin-left: 15px;
+                }
+
+            }
+        }
+
+        &:nth-child(2),
+        &:nth-child(5) {
+            .team-card {
+                margin-right: 26px;
+                margin-left: 26px;
+
+                @media (max-width:1199px) {
+                    margin-right: 8px;
+                    margin-left: 7px;
+                }
+
+                @media (max-width:991px) {
+                    margin-right: 15px;
+                    margin-left: 15px;
+                }
+
+            }
+        }
+
+        &:nth-child(3),
+        &:nth-child(6) {
+            .team-card {
+                margin-left: 53px;
+
+                @media (max-width:1199px) {
+                    margin-left: 15px;
+                }
+
+                @media (max-width:991px) {
+                    margin-right: 15px;
+                    margin-left: 15px;
+                }
+
+            }
+        }
+    }
+}
+
+.team-card {
+    margin-bottom: 30px;
+
+    .image {
+        img {
+            width: 100%;
+        }
+    }
+
+    .content {
+        text-align: left;
+        padding: 35px 40px;
+        padding-top: 28px;
+        background: $white;
+        position: relative;
+        z-index: 1;
+
+        @media (max-width:1199px) {
+            padding: 35px 30px;
+        }
+
+        @media (max-width:399px) {
+            padding: 20px 15px;
+        }
+
+        &::before {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            content: '';
+            width: 30px;
+            height: 30px;
+            background: #F4E8DA;
+            z-index: -1;
+        }
+
+        h2 {
+            a {
+                font-family: $heading-font;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 27px;
+                text-transform: uppercase;
+                color: $heading-color;
+            }
+        }
+
+        span {
+            font-family: $base-font;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 32px;
+            color: $text-light-color;
+        }
+    }
+}
+
+/* 5.3 wpo-testimonial-section-s2 */
+.wpo-testimonial-section-s2 {
+    padding-bottom: 0;
+
+    @media (max-width:991px) {
+        padding-bottom: 90px;
+    }
+
+    @media (max-width:767px) {
+        padding-bottom: 80px;
+    }
+
+    .testimonial-wrap {
+        border-bottom: 0;
+    }
+}

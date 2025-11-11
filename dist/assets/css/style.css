@@ -1,0 +1,125 @@
+\/* Section Padding */
+.section-padding {
+  padding: 120px 0;
+}
+@media (max-width: 991px) {
+  .section-padding {
+    padding: 90px 0;
+  }
+}
+@media (max-width: 767px) {
+  .section-padding {
+    padding: 80px 0;
+  }
+}
+
+/* Contact Page Section */
+.wpo-contact-pg-section {
+  padding-top: 0;
+}
+
+.wpo-contact-pg-section .office-info {
+  background: #F5F2EA;
+  padding: 77px 60px;
+  margin-left: 120px;
+  padding-bottom: 17px;
+}
+
+@media (max-width: 1399px) {
+  .wpo-contact-pg-section .office-info {
+    margin-left: 45px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .wpo-contact-pg-section .office-info {
+    margin-left: 0px;
+    padding: 77px 45px;
+    padding-bottom: 17px;
+  }
+}
+
+@media (max-width: 991px) {
+  .wpo-contact-pg-section .office-info {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  .wpo-contact-pg-section .office-info {
+    padding: 70px 20px;
+    padding-bottom: 17px;
+  }
+}
+
+.wpo-contact-pg-section .office-info .office-info-item {
+  display: flex;
+  justify-content: left;
+  margin-bottom: 50px;
+}
+
+.wpo-contact-pg-section .office-info .office-info-item .office-info-icon {
+  display: flex;
+  align-items: center;
+}
+
+.wpo-contact-pg-section .office-info .office-info-item .office-info-text {
+  margin-left: 20px;
+}
+
+.wpo-contact-pg-section .office-info .office-info-item .office-info-text h2 {
+  font-weight: 700;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #626842;
+}
+
+.wpo-contact-pg-section .office-info .office-info-item .office-info-text p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #84857E;
+  margin-bottom: 0;
+}
+
+/* Section Title */
+.wpo-section-title {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .wpo-section-title {
+    margin-bottom: 40px;
+  }
+}
+
+.wpo-section-title h2 {
+  margin: 0;
+  text-transform: uppercase;
+  font-family: "Sorts Mill Goudy", serif;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 67px;
+}
+
+@media (max-width: 1199px) {
+  .wpo-section-title h2 {
+    font-size: 47px;
+  }
+}
+
+@media (max-width: 767px) {
+  .wpo-section-title h2 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+.wpo-section-title p {
+  font-weight: 400;
+  font-size: 16px;
+  color: #84857E;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
