@@ -1,0 +1,149 @@
+---
+import Layout from '../layouts/Layout.astro';
+import NavBar from '../components/Nav-Bar.astro';
+import ContactHeader from '../components/Contact-Header.astro';
+import ContactSection from '../components/contact.astro';
+import PreLoader from '../components/preloader.astro';
+import Footer from '../components/footer.astro';
+import { Phone, MapPin } from "lucide-react";
+
+
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+	<NavBar />
+    <ContactHeader />
+
+
+<!-- start wpo-contact-pg-section -->
+<section class="wpo-contact-pg-section section-padding">
+    <div class="container pt-5">
+    
+
+    <!-- Offices -->
+    <div class="office-container">
+      <!-- Office 1 -->
+      <div class="office-info">
+        <div class="office-info-item">
+          <div class="office-info-icon">
+            <Phone color="#626842" size={24} />
+          </div>
+          <div class="office-info-text">
+            <h2>Call Us:</h2>
+            <p>+852 2632 9288</p>
+          </div>
+        </div>
+        <div class="office-info-item">
+          <div class="office-info-icon">
+            <MapPin color="#626842" size={24} />
+          </div>
+          <div class="office-info-text">
+            <h2>Hong Kong</h2>
+            <p>
+              <strong>MIRA BOITE INTERNATIONAL LIMITED</strong><br />
+              UNIT 1603, 16TH FLOOR, THE L. PLAZA 367 - 375 QUEEN'S ROAD CENTRAL SHEUNG WAN HK HONG KONG
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Office 2 -->
+      <div class="office-info">
+        <div class="office-info-item">
+          <div class="office-info-icon">
+            <Phone color="#626842" size={24} />
+          </div>
+          <div class="office-info-text">
+            <h2>Call Us:</h2>
+            <p>+91 8111 851 888</p>
+          </div>
+        </div>
+        <div class="office-info-item">
+          <div class="office-info-icon">
+            <MapPin color="#626842" size={24} />
+          </div>
+          <div class="office-info-text">
+            <h2>India</h2>
+            <p>
+              <strong>MIRABOITE PACKAGING LLP</strong><br />
+              50/1062 A2,(37/3434) GROUND FLOOR PRASANTHI NAGAR ROAD, PERINGAD EDAPPALLY, Kerala, India - 682024
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Office 3 -->
+      <div class="office-info">
+        <div class="office-info-item">
+          <div class="office-info-icon">
+            <Phone color="#626842" size={24} />
+          </div>
+          <div class="office-info-text">
+            <h2>Call Us:</h2>
+            <p>+971 6 7434804</p>
+          </div>
+        </div>
+        <div class="office-info-item">
+          <div class="office-info-icon">
+            <MapPin color="#626842" size={24} />
+          </div>
+          <div class="office-info-text">
+            <h2>UAE</h2>
+            <p>
+              <strong>DIWANIYA INTERIORS FZC</strong><br />
+              E32-F44, Hamriyah Free Zone, PO Box No. 49944, Sharjah – U.A.E, P.O. Box: 49944
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end wpo-contact-pg-section -->
+
+<style>
+  .office-container {
+    display: flex;
+    justify-content: space-between; /* ensures 3 in a row with no gaps */
+    align-items: stretch;
+    flex-wrap: nowrap; /* stays in one row */
+    margin: 0;
+    gap: 20px;
+    padding-top: 30;
+  }
+
+  .office-container > .office-info {
+    flex: 1 1 33.33%;
+    padding: 10;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+  }
+
+  .office-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 0;
+  }
+
+  .office-info-text h2,
+  .office-info-text p {
+    margin: 0;
+  }
+
+  @media (max-width: 992px) {
+    .office-container {
+      flex-wrap: wrap;
+    }
+
+    .office-container > .office-info {
+      flex: 1 1 100%;
+    }
+  }
+</style>
+
+</Layout>
