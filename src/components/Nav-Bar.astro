@@ -1,150 +1,61 @@
 ---
-const currentPath = Astro.url.pathname;
+/**
+ * Navbar – Mira
+ * Fixed + transparent over hero
+ */
 ---
 
-<header id="header">
-            <!-- end topbar -->
-            <div class="wpo-site-header">
-                <nav class="navigation navbar navbar-expand-lg navbar-light">
-                    <div class="container">
-                        <div class="row align-items-center">
-                            <div class="col-lg-3 col-md-3 col-3 d-lg-none dl-block">
-                                <div class="mobail-menu">
-                                    <button type="button" class="navbar-toggler open-btn">
-                                        <span class="sr-only">Toggle navigation</span>
-                                        <span class="icon-bar first-angle"></span>
-                                        <span class="icon-bar middle-angle"></span>
-                                        <span class="icon-bar last-angle"></span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-6 col-6">
-                                <div class="navbar-header">
-                                    <a class="navbar-brand" href="index.html"><img src="/assets/images/logo.png"
-                                            alt="logo"></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-8 col-md-1 col-1">
-                                <div id="navbar" class="collapse navbar-collapse navigation-holder">
-                                    <button class="menu-close"><i class="ti-close"></i></button>
-                                    <ul class="nav navbar-nav mb-2 mb-lg-0">
-                                        <li>
-                                            <a 
-                                            href="/" 
-                                            class={currentPath === '/' ? 'active' : ''}
-                                            >Home
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="about"
-                                            class={currentPath === '/about' ? 'active' : ''}
-                                            >about us </a>
-                                        </li>
-                                        <li>
-                                            <a href="contact"
-                                            class={currentPath === '/contact' ? 'active' : ''}
-                                            >Contact Us</a>
-                                        </li>
-                                        <!-- <li class="menu-item-has-children">
-                                            <a href="#">Pages</a>
-                                            <ul class="sub-menu">
-                                                <li class="menu-item-has-children">
-                                                    <a href="#">Shop</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="shop.html">Shop</a></li>
-                                                        <li><a href="product-details.html">Shop Single</a></li>
-                                                        <li><a href="cart.html">Cart</a></li>
-                                                        <li><a href="checkout.html">Checkout</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="wishlist.html">wishlist</a></li>
-                                                <li><a href="order.html">order</a></li>
-                                                <li><a href="404.html">404 Error</a></li>
-                                                <li><a href="faq.html">FAQ</a></li>
-                                                <li><a href="login.html">login</a></li>
-                                            </ul>
-                                        </li>
-                                         <li class="menu-item-has-children">
-                                            <a href="#">team</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="team.html">team</a></li>
-                                                <li><a href="team-single.html">team single</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="#">Blog</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="blog.html">Blog right sidebar</a></li>
-                                                <li><a href="blog-left-sidebar.html">Blog left sidebar</a></li>
-                                                <li><a href="blog-fullwidth.html">Blog fullwidth</a></li>
-                                                <li class="menu-item-has-children">
-                                                    <a href="#">Blog details</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="blog-single.html">Blog details right sidebar</a>
-                                                        </li>
-                                                        <li><a href="blog-single-left-sidebar.html">Blog details left
-                                                                sidebar</a></li>
-                                                        <li><a href="blog-single-fullwidth.html">Blog details
-                                                                fullwidth</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li> -->
-                                        <!-- <li>
-                                        <a href="contact"
-                                            class={currentPath === '/about' ? 'active' : ''}
-                                            >Contact Us </a>
-                                        </li> -->
-                                    </ul>
+<header class="absolute inset-x-0 top-0 z-50">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
+    
+    <!-- LOGO -->
+    <a href="/" class="flex items-center gap-2">
+      <img
+        src="/assets/images/logo.png"
+        alt="Mira"
+        class="h-10 w-auto"
+      />
+    </a>
 
-                                </div><!-- end of nav-collapse -->
-                            </div>
-                            <!-- <div class="col-lg-2 col-md-2 col-2">
-                                <div class="header-right">
-                                    <div class="mini-cart">
-                                        <button class="cart-toggle-btn"> <i class="fi flaticon-shopping-basket"></i>
-                                            <span class="cart-count"></span></button>
-                                        <div class="mini-cart-content">
-                                            <button class="mini-cart-close"><i class="ti-close"></i></button>
-                                            <div class="mini-cart-items">
-                                                <div class="mini-cart-item clearfix">
-                                                    <div class="mini-cart-item-image">
-                                                        <a href="shop.html"><img
-                                                                src="assets/images/shop/mini-cart/img-1.jpg" ></a>
-                                                    </div>
-                                                    <div class="mini-cart-item-des">
-                                                        <a href="shop.html">Ear Ring</a>
-                                                        <span class="mini-cart-item-price">$20.15 x 1</span>
-                                                        <span class="mini-cart-item-quantity"><a href="#"><i
-                                                                    class="ti-close"></i></a></span>
-                                                    </div>
-                                                </div>
-                                                <div class="mini-cart-item clearfix">
-                                                    <div class="mini-cart-item-image">
-                                                        <a href="shop.html"><img
-                                                                src="assets/images/shop/mini-cart/img-2.jpg" ></a>
-                                                    </div>
-                                                    <div class="mini-cart-item-des">
-                                                        <a href="shop.html">Necklace</a>
-                                                        <span class="mini-cart-item-price">$13.25 x 2</span>
-                                                        <span class="mini-cart-item-quantity"><a href="#"><i
-                                                                    class="ti-close"></i></a></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="mini-cart-action clearfix">
-                                                <span class="mini-checkout-price">Subtotal: <span>$215.14</span></span>
-                                                <div class="mini-btn">
-                                                    <a href="checkout.html" class="view-cart-btn s1">Checkout</a>
-                                                    <a href="cart.html" class="view-cart-btn">View Cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
-                        </div>
-                    </div><!-- end of container -->
-                </nav>
-            </div>
-        </header>
+    <!-- DESKTOP NAV -->
+    <ul class="hidden items-center gap-10 text-sm text-[#5c6442] md:flex">
+      <li>
+        <a href="/" class="transition hover:opacity-70">
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="/about" class="transition hover:opacity-70">
+          About Us
+        </a>
+      </li>
+      <li>
+        <a
+          href="/contact"
+          class="rounded border border-[#c8b89a] px-5 py-2 transition hover:bg-[#5c6442] hover:text-white"
+        >
+          Contact Us
+        </a>
+      </li>
+    </ul>
+
+    <!-- MOBILE PLACEHOLDER -->
+    <button
+      class="md:hidden"
+      aria-label="Open menu"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="#5c6442"
+        class="h-6 w-6"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+      </svg>
+    </button>
+
+  </nav>
+</header>

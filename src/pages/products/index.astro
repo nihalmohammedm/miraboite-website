@@ -1,0 +1,80 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Sorry from "../../components/Sorry.astro";
+
+const products = [
+  {
+    name: "Paper Bags",
+    image: "/assets/images/collection/paper-bag.png",
+    href: "/products/paper-bags",
+  },
+  // {
+  //   name: "Wooden Boxes",
+  //   image: "/assets/images/collection/wooden-box.png",
+  //   href: "/products/wooden-boxes",
+  // },
+  {
+    name: "Plastic Boxes",
+    image: "/assets/images/collection/wooden-box.png",
+    href: "/products/plastic-boxes",
+  },
+  {
+    name: "Jewellery Boxes",
+    image: "/assets/images/collection/jewellery-box.png",
+    href: "/products/jewellery-boxes",
+  },
+  {
+    name: "Corporate Gift Packaging",
+    image: "/assets/images/collection/corporate-gift.png",
+    href: "/products/corporate-gifts",
+  },
+];
+---
+
+<Layout>
+  
+<section class="bg-white py-20 md:py-24">
+  <div class="mx-auto max-w-7xl px-6">
+
+    <!-- PAGE HEADER -->
+    <div class="mx-auto max-w-2xl text-center">
+      <h1 class="font-serif text-3xl tracking-wide text-[#5c6442] md:text-4xl">
+        Our Products
+      </h1>
+
+      <p class="mt-4 text-sm text-[#7a7a6a]">
+        Explore our range of custom packaging solutions designed for jewellery
+        brands and corporate gifting businesses.
+      </p>
+    </div>
+
+    <!-- PRODUCTS GRID -->
+    <div class="mt-20 grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3">
+      {products.map((product) => (
+        <a
+          href={product.href}
+          class="group block border border-[#efe6d6] bg-white"
+        >
+          <!-- IMAGE -->
+          <div class="h-64 w-full overflow-hidden">
+            <img
+              src={product.image}
+              alt={product.name}
+              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+
+          <!-- NAME -->
+          <div class="p-6 text-center">
+            <p class="font-serif text-lg text-[#5c6442]">
+              {product.name}
+            </p>
+          </div>
+        </a>
+      ))}
+    </div>
+
+  </div>
+  <Sorry message="We are revamping our website. Product Data might be Inaccurate Sorry for the inconvenience." />
+</section>
+</Layout>

@@ -1,0 +1,60 @@
+---
+import Sorry from "../components/Sorry.astro"
+import Layout from "../layouts/Layout.astro"
+---
+
+<script
+  src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js"
+  type="module"
+></script>
+
+<Layout>
+<section class="min-h-screen bg-[#f6f2e8] flex items-center">
+  <div class="mx-auto max-w-7xl px-6 w-full text-center">
+
+    <!-- VISUAL METAPHOR -->
+    <div class="mx-auto mb-10 flex h-40 w-40 items-center justify-center mb-8 border-0">
+      <dotlottie-wc
+  src="https://lottie.host/95ca98f4-a0c6-4cd6-a5c6-0e391fb205bb/HUQmc4YAZx.lottie"
+  style="width: 300px;height: 300px"
+  autoplay
+  loop
+></dotlottie-wc>
+
+    </div>
+
+    <!-- COPY -->
+    <h1 class="font-serif text-3xl tracking-wide text-[#5c6442] md:text-4xl">
+      This box is empty
+    </h1>
+
+    <p class="mx-auto mt-6 max-w-md text-sm leading-relaxed text-[#7a7a6a]">
+      The page you’re looking for doesn’t exist or has been moved.
+      Let’s get you back to something worth opening.
+    </p>
+
+    <!-- ACTIONS -->
+    <div class="mt-10 flex justify-center gap-4">
+      <a
+        href="/"
+        class="rounded border border-[#c8b89a] px-6 py-3 text-sm text-[#5c6442] transition hover:bg-[#5c6442] hover:text-white"
+      >
+        Back to Home
+      </a>
+
+      <a
+        href="/products"
+        class="rounded border border-[#c8b89a] px-6 py-3 text-sm text-[#5c6442] transition hover:bg-[#5c6442] hover:text-white"
+      >
+        Explore Products
+      </a>
+    </div>
+  </div>
+
+  <!-- Optional notice -->
+  <Sorry message="We are revamping our website. Some pages may be unavailable." />
+</section>
+
+
+
+</Layout>

@@ -1,84 +1,108 @@
 ---
-import { Mail } from 'lucide-react';
-import { Dot } from 'lucide-react';
-import { Facebook } from 'lucide-react';
-import { Instagram } from 'lucide-react';
-import { Twitter } from 'lucide-react';
-import { Linkedin } from 'lucide-react';
-import { ChevronRight } from 'lucide-react';
-
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Instagram,
+  Twitter,
+  Linkedin,
+} from "lucide-astro";
 ---
 
- 
- <footer class="wpo-site-footer">
-            <div class="wpo-upper-footer">
-                <div class="container">
-                    <div class="row d-flex justify-content-between">
-                        <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
-                            <div class="widget about-widget">
-                                <div class="logo widget-title">
-                                    <img src="/assets/images/logo.png" alt="logo">
-                                </div>
-                                <p>Making your packing requirements</p>
-                                <ul class="social">
-                                    <li><a href="#"><Facebook /></a></li>
-                                    <li><a href="#"><Instagram /></i></a></li>
-                                    <li><a href="#"><Twitter /></a></li>
-                                    <li><a href="#"><Linkedin /></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
-                            <div class="widget link-widget">
-                                <div class="widget-title">
-                                    <h3>Quick Links:</h3>
-                                </div>
-                                <ul>
-                                    <li><ChevronRight /><a href="contact">Contact us</a></li>
-                                    <li><ChevronRight /><a href="about">About us</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
-                            <div class="widget link-widget">
-                                <div class="widget-title">
-                                    <h3>Contact us for Enquiry</h3>
-                                </div>
-                                <ul>
-                                    
- <li> <a href="mailto:info@rashidmira.com"> <Mail color='white'/>   info@rashidmira.com</a></li>
-                                </ul>
-                            </div>
-                        </div>
+<footer class="bg-[#5c6442] text-[#f4efe4]">
+  <div class="mx-auto max-w-7xl px-6 py-20">
+    <!-- TOP GRID -->
+    <div class="grid grid-cols-1 gap-12 md:grid-cols-3 items-start">
+      <!-- BRAND -->
+      <div>
+        <img
+          src="/assets/images/logo.png"
+          alt="Mira Boite"
+          class="h-10 w-auto"
+        />
 
-                    </div>
-                </div> <!-- end container -->
-            </div>
-            <div class="wpo-lower-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col col-xs-12">
-                            <p class="copyright"> Copyright &copy; 2025 Mira Boite International Limited.
-                                All
-                                Rights Reserved.</p>
+        <!-- SOCIALS -->
+        <div class="mt-8 flex gap-4">
+          <!-- Facebook -->
+          <a
+            href="#"
+            class="flex h-10 w-10 items-center justify-center rounded-full bg-[#b5894d] text-white hover:opacity-80"
+          >
+            <Facebook class="h-4 w-4 stroke-[1.5]" />
+          </a>
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="shape">
-                <svg viewBox="0 0 260 394" fill="none">
-                    <rect opacity="0.5" x="0.5" y="0.5" width="191" height="393" rx="95.5" stroke="white"
-                        stroke-opacity="0.2" />
-                    <rect width="260" height="140" fill="#5C623D" />
-                </svg>
-            </div>
-        </footer>
-        <style>
-/* remove generated ::before/::after for footer anchors (override theme) */
-.wpo-site-footer a::before,
-.wpo-site-footer a::after {
-  content: "" !important;
-  display: none !important;
-}
-</style>
+          <!-- Instagram -->
+          <a
+            href="#"
+            class="flex h-10 w-10 items-center justify-center rounded-full bg-[#b5894d] text-white hover:opacity-80"
+          >
+            <Instagram class="h-4 w-4 stroke-[1.5]" />
+          </a>
+
+          <!-- Twitter -->
+          <a
+            href="#"
+            class="flex h-10 w-10 items-center justify-center rounded-full bg-[#b5894d] text-white hover:opacity-80"
+          >
+            <Twitter class="h-4 w-4 stroke-[1.5]" />
+          </a>
+
+          <!-- LinkedIn -->
+          <a
+            href="#"
+            class="flex h-10 w-10 items-center justify-center rounded-full bg-[#b5894d] text-white hover:opacity-80"
+          >
+            <Linkedin class="h-4 w-4 stroke-[1.5]" />
+          </a>
+        </div>
+      </div>
+
+      <!-- QUICK LINKS -->
+      <div>
+        <p class="font-serif text-lg mb-6">Quick Links:</p>
+
+        <ul class="space-y-4 text-sm">
+          <li class="flex items-center gap-2">
+            <span>›</span>
+            <a href="/contact" class="hover:underline"> Contact Us </a>
+          </li>
+          <li class="flex items-center gap-2">
+            <span>›</span>
+            <a href="/about" class="hover:underline"> About Us </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- CONTACT -->
+      <div>
+        <p class="font-serif text-lg mb-6">Contact us for Enquiry</p>
+
+        <div class="flex items-center gap-3 text-sm">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            class="h-5 w-5"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3 8l9 6 9-6M5 6h14a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2z"
+            ></path>
+          </svg>
+
+          <a href="mailto:info@rashidmira.com" class="hover:underline">
+            info@rashidmira.com
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="mt-16 text-center text-xs text-[#e6e1d6]">
+      Copyright © 2025 Mira Boite International Limited. All Rights Reserved.
+    </div>
+  </div>
+</footer>
