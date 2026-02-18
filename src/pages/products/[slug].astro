@@ -1,0 +1,54 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import NavBar from "../../components/Nav-Bar.astro";
+import Footer from "../../components/footer.astro";
+import { getPortfolioCollections, type PortfolioCollection } from "../../lib/portfolio";
+
+export function getStaticPaths() {
+  return getPortfolioCollections().map((collection) => ({
+    params: { slug: collection.slug },
+    props: { collection },
+  }));
+}
+
+const { collection } = Astro.props as { collection: PortfolioCollection };
+---
+
+<Layout>
+  <NavBar />
+
+  <section class="bg-white pb-20 pt-36 md:pb-24 md:pt-40">
+    <div class="mx-auto max-w-7xl px-6">
+      <a
+        href="/products"
+        class="inline-flex items-center text-xs uppercase tracking-[0.16em] text-[#b5894d] transition hover:text-[#5c6442]"
+      >
+        Back to Portfolio
+      </a>
+
+      <div class="mt-6 max-w-3xl">
+        <h1 class="font-serif text-3xl tracking-wide text-[#5c6442] md:text-5xl">{collection.title}</h1>
+        <p class="mt-4 text-sm leading-relaxed text-[#7a7a6a] md:text-base">{collection.description}</p>
+        <p class="mt-4 text-xs uppercase tracking-[0.18em] text-[#a88a59]">{collection.imageCount} Images</p>
+      </div>
+
+      <div class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {collection.images.map((image, index) => (
+          <figure class="overflow-hidden border border-[#efe6d6] bg-white">
+            <img
+              src={image}
+              alt={`${collection.title} image ${index + 1}`}
+              loading="lazy"
+              class="h-72 w-full object-cover"
+            />
+            <figcaption class="px-4 py-3 text-xs uppercase tracking-[0.12em] text-[#8c8b80]">
+              Image {index + 1}
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

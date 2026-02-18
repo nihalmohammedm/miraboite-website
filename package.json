@@ -3,8 +3,11 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
+    "predev": "node scripts/ensure-dist-background.mjs",
     "dev": "astro dev",
-    "build": "astro build",
+    "prebuild": "node scripts/ensure-dist-background.mjs",
+    "build": "astro build && node scripts/ensure-dist-background.mjs",
+    "prepreview": "node scripts/ensure-dist-background.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },
